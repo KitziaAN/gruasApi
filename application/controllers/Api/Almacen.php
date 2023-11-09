@@ -7,6 +7,11 @@ class Almacen extends REST_Controller{
     public function __construct(){
         parent:: __construct();
         $this->load->database();
+
+        header("Access-Control-Allow-Origin: http://localhost:5173");
+        header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+        header("Access-Control-Allow-Headers: Content-Type");
+        header("Access-Control-Allow-Credentials: true");
     }
 
     public function index_get($id=0){
